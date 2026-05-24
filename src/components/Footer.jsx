@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <p>© 2026 Laziz Abdimanabvo | All Rights Reserved</p>
+      <p>© 2026 Laziz Abdimanabov | All Rights Reserved</p>
     </footer>
   );
 }
