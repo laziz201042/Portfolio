@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #d9e2ec);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Tugmalar va linklar animatsiyasi */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  color: #00aced;
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}

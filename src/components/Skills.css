@@ -1,0 +1,188 @@
+/* SKILLS SECTION */
+.skills {
+  position: relative;
+
+  width: 85%;
+  max-width: 1000px;
+
+  margin: 80px auto;
+
+  padding: 70px 40px;
+
+  text-align: center;
+
+  border-radius: 35px;
+
+  overflow: hidden;
+
+  /* ORQA FON RASM */
+  background-image: url("/skills-bg.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* RASMNI TO‘LIQ KO‘RSATADI */
+  background-size: cover;
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* YENGIL QORAYTIRISH */
+.skills::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.25);
+
+  backdrop-filter: blur(1px);
+}
+
+/* CONTENT */
+.skills-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* blur effect */
+.skills::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: blur(2px);
+
+  background: rgba(0,0,0,0.15);
+}
+
+/* content ustiga chiqishi uchun */
+.skills-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* DARK OVERLAY */
+.skills::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.25);
+
+  backdrop-filter: blur(3px);
+}
+
+/* CONTENT */
+.skills-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+.skills h2 {
+  color: white;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+
+  letter-spacing: 1px;
+}
+
+/* TEXT */
+.skills p {
+  color: rgba(255,255,255,0.8);
+
+  font-size: 17px;
+
+  margin-bottom: 45px;
+}
+
+/* ICON GRID */
+.icons-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 35px;
+}
+
+/* ICON BOX */
+.icons-grid svg {
+  font-size: 65px;
+
+  padding: 18px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.35s ease;
+
+  cursor: pointer;
+}
+
+/* HTML */
+.icons-grid .html {
+  color: #e34f26;
+}
+
+/* CSS */
+.icons-grid .css {
+  color: #1572b6;
+}
+
+/* JS */
+.icons-grid .js {
+  color: #f7df1e;
+}
+
+/* REACT */
+.icons-grid .react {
+  color: #61dafb;
+}
+
+/* GITHUB */
+.icons-grid .github {
+  color: #ffffff;
+}
+
+/* HOVER */
+.icons-grid svg:hover {
+  transform: translateY(-10px) scale(1.12);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .skills {
+    width: 92%;
+
+    padding: 40px 20px;
+  }
+
+  .skills h2 {
+    font-size: 32px;
+  }
+
+  .icons-grid {
+    gap: 22px;
+  }
+
+  .icons-grid svg {
+    font-size: 50px;
+    padding: 15px;
+  }
+
+}

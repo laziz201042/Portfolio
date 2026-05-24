@@ -1,0 +1,168 @@
+/* SECTION */
+.about {
+  position: relative;
+  padding: 120px 8%;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  /* BACKGROUND */
+  background-image: url("/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔥 SHARP FIX */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* dark glass overlay */
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔥 parallax feel */
+  transform: scale(1.1);
+  z-index: -1;
+}
+.about > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+.about h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* TOP CARDS */
+.top-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.top-card {
+  position: relative;
+  width: 260px;
+  height: 170px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+
+.top-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.top-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 15px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.top-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.top-card:hover img {
+  transform: scale(1.1);
+}
+
+.top-card:hover .top-overlay {
+  opacity: 1;
+}
+
+/* ABOUT CARDS GRID */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* CARD STYLE */
+.about-card {
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition: 0.4s ease;
+  cursor: pointer;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow effect */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 60%);
+  transform: rotate(25deg);
+  transition: 0.5s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+}
+
+.about-card:hover::before {
+  transform: rotate(0deg) scale(1.2);
+}
+
+/* ICON */
+.about-card i {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: cyan;
+}
+
+/* TEXT */
+.about-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.about-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
